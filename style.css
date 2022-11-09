@@ -1,0 +1,354 @@
+body {
+    margin: 0;
+    background-color: aliceblue;
+    position: relative;
+    font-family: sans-serif;
+    background: #42876454;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+
+.header-container {
+  display: grid;
+  place-items: center;  
+  text-align: center;
+}
+
+.search {
+    width: 300px;
+    height: 50px;
+    font-size: 22px;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 300%;
+  text-transform: uppercase;
+}
+
+
+.hidden {
+    overflow: hidden;
+}
+
+
+.d-none {
+    display: none !important;
+}
+
+
+.flex {
+    display: flex;
+}
+
+
+.between {
+    justify-content: space-between;
+}
+
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.around {
+    justify-content: space-around;
+}
+
+
+.column {
+    flex-direction: column;
+}
+
+
+#pokedex {
+    min-height: 50vh;
+    background-color: rgb(219, 33, 33);
+    color: white;
+    display: flex;
+    padding: 24px;
+}
+
+
+h1 {
+    margin: 24px 0 0 0;
+    font-size: 3rem;
+}
+
+
+.position-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -31px;
+}
+
+
+.dialog {
+    width: 500px;
+    border-radius: 40px;
+    margin-top: 31px;
+    max-height: 100vh;
+    overflow-y: scroll;
+    margin-top: 81px;
+    z-index: 2;
+}
+
+
+.dialog::-webkit-scrollbar {
+    display: none;
+
+}
+
+
+.dialog {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: #72726d;
+}
+
+
+.pokedex-container {
+    max-width: 100vw;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    margin: 16px;
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7aff7e66;
+    cursor: pointer;
+    transition: all 100ms;
+    -webkit-transition: background-color 225ms ease-out;
+    -moz-transition: background-color 225ms ease-out;
+    -o-transition: background-color 225ms ease-out;
+    transition: background-color 225ms ease-out;
+}
+
+
+.card:hover {
+    background-color: #7aff7e;
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+
+.typestyle {
+    margin-top: 12px;
+    border: solid 1px;
+    border-radius: 16px;
+    text-align: center;
+    width: 91px;
+    height: 26px;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+
+#pokemon-img {
+    width: 150px;
+    height: 150px;
+}
+
+
+#top {
+    color: white;
+    border-radius: 40px 40px 0 0;
+}
+
+
+.id-exit {
+    font-size: 1.5rem;
+    padding: 22px;
+}
+
+
+.exit {
+    width: 30px;
+    height: 30px;
+}
+
+
+.exit img {
+    width: 20px;
+}
+
+
+.exit img:hover {
+    transform: scale(1.00);
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+}
+
+
+.dialog-name {
+    margin-left: 20px;
+    font-size: 2.5rem;
+}
+
+
+.dialog-type {
+    margin: 8px 32px;
+    font-size: 1.2rem;
+}
+
+
+.dialog-type span {
+    padding: 3px 8px;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    opacity: .8;
+}
+
+
+.dialog-img {
+    max-width: 300px;
+    margin-bottom: -24px;
+    z-index: 1;
+}
+
+
+.bottom {
+    background-color: aliceblue;
+    color: black;
+}
+
+
+.stats-container {
+    padding: 0 80px;
+    border-radius: 40px;
+}
+
+
+.stats {
+    width: 100%;
+}
+
+
+.status {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    margin-bottom: 15px;
+}
+
+
+
+.button-15 {
+    position: fixed;
+    bottom: 0;
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom: 2%;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    font-size: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1.5px 1.5px 0 rgb(0 0 0 / 14%);
+    background-color: rgba(216, 132, 71, 0.8)
+}
+
+
+
+/*Responsive Design*/
+@media (max-width: 540px) {
+
+    .dialog {
+        width: 100%;
+    }
+
+    .status {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 4px 0;
+        margin-bottom: 15px;
+    }
+
+    .dialog-img {
+        max-width: 195px;
+        margin-bottom: -24px;
+        z-index: 1;
+    }
+
+    .dialog {
+        width: 550px;
+        border-radius: 0px;
+        margin-top: 31px;
+        max-height: 100vh;
+        overflow: hidden;
+        min-height: 100vh;
+    }
+
+    .stats-container {
+        padding:80px;
+        border-radius: 0px;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+}

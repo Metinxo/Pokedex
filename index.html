@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+
+<body id="body" onload="loadPokemon()">
+    <div>
+        <img id="dark" style="opacity:0.8; width: 100%; height: 100vh; position: fixed;" class="d-none" src="backgroundtest.png">
+    </div>
+
+    <header class="site-header" style="display:flex; justify-content:center;">
+        <div class="site-identity">
+            <div class="header-container">
+                <h2 class="title">
+                  <span class="title-word title-word-1">This</span>
+                  <span class="title-word title-word-2">is</span>
+                  <span class="title-word title-word-3">my</span>
+                  <span class="title-word title-word-4">pokédex</span>
+                </h2>
+              </div>
+        </div> 
+
+      </header>
+      <div class="sticky flex center">
+        <input class="search" id="search" type="search" placeholder="Search Pokemon ..." onkeyup="searchPokemon()">
+    </div>
+
+
+    <div class="pokedex-container flex center " id="pokedex-container"></div>
+    <div class="button-container">
+    <button id="button" class="button-15" onclick="loadPokemon()">Load more</button>
+    </div>
+
+
+    <div class="position-container flex center  d-none" id="position-container">
+        <div class="dialog flex column" id="dialog">
+            <div id="top">
+                <div class="id-exit flex between">
+                    <div id="id"></div>
+                    <div class="exit flex center" onclick="closeDialog()"><img src="x.png"></div>
+                </div>
+                <div class="dialog-name" id="dialog-name"><span></span></div>
+                <div class="dialog-type"><span id="dialog-type"></span></div>
+                <div class="flex center"><img src="" class="dialog-img" id="dialog-img"></div>
+            </div>
+            <div class="stats-container bottom flex center column">
+                <div class="stats-hl"><h2>Base Stats</h2></div>
+                <div class="stats flex center column" style="font-weight: bold;">
+                    <div class="status">
+                        <div>Hp</div>
+                        <div id="hp"></div>
+                    </div>
+                    <div class="status">
+                        <div>Attack</div>
+                        <div id="attack"></div>
+                    </div>
+                    <div class="status">
+                        <div>Defense</div>
+                        <div id="defense"></div>
+                    </div>
+                    <div class="status">
+                        <div>Spezial-attack</div>
+                        <div id="special-attack"></div>
+                    </div>
+                    <div class="status">
+                        <div>Spezial-defense</div>
+                        <div id="special-defense"></div>
+                    </div>
+                    <div class="status">
+                        <div>Speed</div>
+                        <div id="speed"></div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+    </div>
+
+</body>
+
+</html>
